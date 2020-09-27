@@ -3,8 +3,6 @@ package com.hachathon.reviewNratings.document;
 import lombok.Builder;
 import lombok.Data;
 
-import java.time.ZonedDateTime;
-
 @Data
 @Builder
 public class ReviewsAndRatings {
@@ -20,7 +18,6 @@ public class ReviewsAndRatings {
     private String reviewStatus;
     private boolean verifiedPurchase;
     private long helpful_count;
-    private float sentiment_factor;
-    private float overall_rating;
+    private float review_score;
     private int sentiment;
 }

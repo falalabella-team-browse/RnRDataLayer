@@ -21,7 +21,7 @@ public class AsyncConfiguration {
         executor.setCorePoolSize(2);
         executor.setMaxPoolSize(50);
         executor.setQueueCapacity(100);
-        executor.setThreadNamePrefix("CarThread-");
+        executor.setThreadNamePrefix("rnr-");
         executor.initialize();
         return executor;
     }

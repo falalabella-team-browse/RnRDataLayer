@@ -92,9 +92,9 @@ public class ReviewRatingsService {
             Random rd = new Random();
             int help = getRandomNumber(helpful_min,helpful_max);
             boolean verifiedPurchase = rd.nextBoolean();
-            String author = null != row.getCell(0) ? String.valueOf(row.getCell(0).getNumericCellValue()):null;
+            String author = null != row.getCell(0) ? String.valueOf(row.getCell(0).getNumericCellValue()).replace(".0",""):null;
             float rating = null != row.getCell(4) ? Float.valueOf(String.valueOf(row.getCell(4).getNumericCellValue())):null;
-            String entityId = null != row.getCell(1)?String.valueOf(row.getCell(1).getNumericCellValue()):null;
+            String entityId = null != row.getCell(1)?String.valueOf(row.getCell(1).getNumericCellValue()).replace(".0",""):null;
             String title = null != row.getCell(2)?row.getCell(2).getStringCellValue():null;
             String description =null != row.getCell(3) ? row.getCell(3).getStringCellValue():null;
             SentimentAnalysisRequest analysisRequest = SentimentAnalysisRequest.builder()
